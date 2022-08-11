@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="E2E Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="Test1">
+        <classes>
+            <class name="End2End.RFQ_E2E">
+                <methods>
+                    <include name="RFQ_Room_HBA"/>
+                    <include name="RFQ_RoomEditRFQ_Info"/>
+                    <include name="RFQ_RoomUpdatePosition"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Test2">
+        <classes>
+            <class name="End2End.RFQ_OverviewEnd2End">
+                <methods>
+                    <include name="RFQsRoom"/>
+                    <include name="RFQsRoom_QuickView"/>
+                    <include name="quickViewPositionsOptions"/>
+                    <include name="RFQsRoom_AdditionalInfoTab"/>
+                    <include name="HBA_Tab_Quickview"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
