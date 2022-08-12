@@ -19,7 +19,7 @@ public class SearchCompany extends BasePage {
 
 	public boolean clickOnGoButton() {
 		clickandwait(GoButton);
-		return true;
+		return false;
 	}
 
 	public void searchedCompany(String CompanyName) {

@@ -12,6 +12,7 @@ public class PageCollection {
 
 	private AddCompany loginPage;
 	private SearchCompany searchCompany;
+	private CreateUser createUser;
 
 	public AddCompany getLoginPage() {
 
@@ -22,6 +23,10 @@ public class PageCollection {
 
 		return (searchCompany == null) ? searchCompany = new SearchCompany(driver) : searchCompany;
 
+	}
+
+	public CreateUser getCreateUser() {
+		return (createUser == null) ? createUser = new CreateUser(driver) : createUser;
 	}
 
 }

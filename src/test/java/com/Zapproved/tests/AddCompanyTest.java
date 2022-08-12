@@ -32,22 +32,22 @@ public class AddCompanyTest extends BaseTest {
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add Company button ");
 		pages.getLoginPage().clickOnAddCompany();
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Enter A Company Name ");
+		ReportGenerator.getExtentReport().log(Status.INFO, "Entered A Company Name ");
 		pages.getLoginPage().enterCompanyName(Company);
 
 //		ReportGenerator.getExtentReport().log(Status.INFO, "Upload A Company logo ");
 //		pages.getLoginPage().uploadCompanyLogo(PathToInputPNG);
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Enter Custom Logout URL.");
+		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Custom Logout URL.");
 		pages.getLoginPage().enterCustomLogoutURL("https://www.test.com");
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Switch SSO Login Toggle.");
 		pages.getLoginPage().switchSSO_LoginToggle();
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Enter SSO Email Domain.");
+		ReportGenerator.getExtentReport().log(Status.INFO, "Entered SSO Email Domain.");
 		pages.getLoginPage().enterSSO_EmailDomains("www.test.com");
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Enter Custom Logout URL.");
+		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Custom Logout URL.");
 		pages.getLoginPage().clickOnCreateCompanyButton();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Click On Eable SSO Button.");
@@ -68,14 +68,14 @@ public class AddCompanyTest extends BaseTest {
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Settings ");
 		pages.getLoginPage().clickOnSettings();
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Enter A Company Name Which You Want To search");
+		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Company Name Which you Want To search");
 		pages.getSearchCompany().enterCompanyNameToSearch("Test Company");
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
 		RetryUtil.retry(() -> {
 			Assert.assertTrue(pages.getSearchCompany().clickOnGoButton(), "Delete button is visible");
 			return null;
-		}, 10);
+		}, 2);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
 		pages.getSearchCompany().searchedCompany(Company);
