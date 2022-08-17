@@ -2,6 +2,7 @@ package com.Zapproved.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class SearchCompany extends BasePage {
 
@@ -9,30 +10,35 @@ public class SearchCompany extends BasePage {
 		super(driver);
 	}
 
-	By SearchCompanies = By.xpath("//input[@placeholder='Search Companies']");
-
 	By GoButton = By.xpath("//span[normalize-space()='GO']");
 
-	public void enterCompanyNameToSearch(String CompanyName) {
-		SetText(SearchCompanies, CompanyName);
+	By SearchOrganization = By.xpath("//input[@placeholder='Search Organizations']");
+
+	public void enterOrganizationNameToSearch(String CompanyName) {
+		waitforelementtoBecomePresent(SearchOrganization);
+		SetText(SearchOrganization, CompanyName);
 	}
 
-	public boolean clickOnGoButton() {
+	public void clickOnGoButton() {
+		waitforelementtoBecomeclickable(GoButton);
 		clickandwait(GoButton);
-		return false;
+		waitforLoaderToAppear();
 	}
 
 	public void searchedCompany(String CompanyName) {
-		Sleep(4);
+		waitforLoaderToAppear();
+		waitforLoaderToDisAppear();
 		By Table = By.xpath("//tbody[@class='ui-table-tbody']//tr//td[1]");
 		int rowCount = driver.get().findElements(Table).size();
 		for (int i = 1; i <= rowCount; i++) {
-			String actvalue = driver.get()
-					.findElement(By.xpath("//tbody[@class='ui-table-tbody']//tr[" + i + "]//td[1]")).getText();
-			if (actvalue.equals(CompanyName)) {
-				String Company = actvalue;
-				System.out.println("Search Result is :" + actvalue);
+			WebElement actvalue = driver.get()
+					.findElement(By.xpath("//tbody[@class='ui-table-tbody']//tr[" + i + "]//td[1]"));
+			if (actvalue.getText().equals(CompanyName)) {
+				actvalue.click();
+				System.out.println("Search Result is :" + actvalue.getText());
 				break;
+			} else {
+				System.out.println("Organization Nou Found");
 			}
 
 		}

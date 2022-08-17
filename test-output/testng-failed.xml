@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Zapproved.tests.AddCompanyTest">
+      <class name="com.Zapproved.tests.AddOrganizationTest">
         <methods>
           <include name="TearDown"/>
-          <include name="searchAnOrganisation"/>
+          <include name="searchOrganization"/>
           <include name="initialie"/>
           <include name="SetUp"/>
         </methods>
-      </class> <!-- com.Zapproved.tests.AddCompanyTest -->
+      </class> <!-- com.Zapproved.tests.AddOrganizationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

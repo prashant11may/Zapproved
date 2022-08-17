@@ -439,12 +439,12 @@ public class BasePage {
 	}
 
 	public void waitforLoaderToAppear() {
-		By loader = By.cssSelector("#loaderDiv");
+		By loader = By.xpath("//*[name()='circle' and contains(@class,'ng-star-in')]");
 		waitforelementtoBecomeVisible(loader);
 	}
 
 	public void waitforLoaderToDisAppear() {
-		By loader = By.cssSelector("#loaderDiv");
+		By loader = By.xpath("//*[name()='circle' and contains(@class,'ng-star-in')]");
 		waitforelementtoBecomeInVisible(loader);
 	}
 

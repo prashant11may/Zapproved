@@ -10,14 +10,9 @@ public class PageCollection {
 		this.driver = driver;
 	}
 
-	private AddCompany loginPage;
 	private SearchCompany searchCompany;
-	private CreateUser createUser;
-
-	public AddCompany getLoginPage() {
-
-		return (loginPage == null) ? loginPage = new AddCompany(driver) : loginPage;
-	}
+	private AddUser addUser;
+	private AddOrganization addOrganization;
 
 	public SearchCompany getSearchCompany() {
 
@@ -25,8 +20,12 @@ public class PageCollection {
 
 	}
 
-	public CreateUser getCreateUser() {
-		return (createUser == null) ? createUser = new CreateUser(driver) : createUser;
+	public AddUser getAddUser() {
+		return (addUser == null) ? addUser = new AddUser(driver) : addUser;
+	}
+
+	public AddOrganization getAddOrganization() {
+		return (addOrganization == null) ? addOrganization = new AddOrganization(driver) : addOrganization;
 	}
 
 }

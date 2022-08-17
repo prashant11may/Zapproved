@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-12T12:26:54 IST" name="Default suite" finished-at="2022-08-12T12:27:15 IST" duration-ms="21025">
+  <suite started-at="2022-08-17T23:37:12 IST" name="Default suite" finished-at="2022-08-17T23:41:36 IST" duration-ms="263961">
     <groups>
     </groups>
-    <test started-at="2022-08-12T12:26:54 IST" name="Default test" finished-at="2022-08-12T12:27:15 IST" duration-ms="21025">
-      <class name="com.Zapproved.tests.CreateUserTest">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.CreateUserTest@67c33749]" started-at="2022-08-12T12:26:54 IST" name="SetUp" finished-at="2022-08-12T12:26:56 IST" duration-ms="2063" status="PASS">
+    <test started-at="2022-08-17T23:37:12 IST" name="Default test" finished-at="2022-08-17T23:41:36 IST" duration-ms="263961">
+      <class name="com.Zapproved.tests.AddOrganizationTest">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-17T23:37:13 IST" name="SetUp" finished-at="2022-08-17T23:37:14 IST" duration-ms="1391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.CreateUserTest@67c33749]" started-at="2022-08-12T12:26:56 IST" name="initialie" finished-at="2022-08-12T12:26:56 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-17T23:37:14 IST" name="initialie" finished-at="2022-08-17T23:37:14 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialie -->
-        <test-method signature="createAnUser()[pri:0, instance:com.Zapproved.tests.CreateUserTest@67c33749]" started-at="2022-08-12T12:26:56 IST" name="createAnUser" finished-at="2022-08-12T12:27:14 IST" duration-ms="18663" status="PASS">
+        <test-method signature="searchOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-17T23:37:14 IST" name="searchOrganization" finished-at="2022-08-17T23:41:34 IST" duration-ms="260009" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAnUser -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.CreateUserTest@67c33749]" started-at="2022-08-12T12:27:14 IST" name="TearDown" finished-at="2022-08-12T12:27:15 IST" duration-ms="263" status="PASS">
+        </test-method> <!-- searchOrganization -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-17T23:41:34 IST" name="TearDown" finished-at="2022-08-17T23:41:36 IST" duration-ms="2528" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createAnUser status=SUCCESS method=CreateUserTest.createAnUser()[pri:0, instance:com.Zapproved.tests.CreateUserTest@67c33749] output={null}]]]>
+                <![CDATA[[TestResult name=searchOrganization status=SUCCESS method=AddOrganizationTest.searchOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.Zapproved.tests.CreateUserTest -->
+      </class> <!-- com.Zapproved.tests.AddOrganizationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
