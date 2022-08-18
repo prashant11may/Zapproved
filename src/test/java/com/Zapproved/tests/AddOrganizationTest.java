@@ -1,16 +1,18 @@
 package com.Zapproved.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
 import Extras.ReportGenerator;
+import Extras.RetryUtil;
 
 @Listeners(Extras.Listeneres.class)
 public class AddOrganizationTest extends BaseTest {
 
-	String Company = "Ashraff Organization";
+	String Company = "xyzzz Organization";
 
 	@Test
 	public void addAnOrganisation() throws Exception {
@@ -40,7 +42,12 @@ public class AddOrganizationTest extends BaseTest {
 		pages.getAddOrganization().clickOnAddButton();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Check Organization is Create or Not ");
-		pages.getAddOrganization().checkOrganization();
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddOrganization().checkOrganization(),
+					"Organization Not Created Or Organization Already Created");
+			;
+			return null;
+		}, 10);
 
 	}
 
@@ -69,9 +76,6 @@ public class AddOrganizationTest extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
 		pages.getSearchCompany().searchedCompany(Company);
-
-//		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add User ");
-//		pages.getAddUser().clickOnAddUser();
 
 	}
 

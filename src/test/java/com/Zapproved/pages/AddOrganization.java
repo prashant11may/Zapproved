@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import utils.TestUtils;
+
 public class AddOrganization extends BasePage {
 
 	public AddOrganization(ThreadLocal<WebDriver> driver) {
@@ -76,25 +78,22 @@ public class AddOrganization extends BasePage {
 
 	}
 
-	public void checkOrganization() { // Check whether organization is created or not
+	public boolean checkOrganization() { // Check whether organization is created or not
 
-		try {
-			waitforelementtoBecomeclickable(Error);
-			WebElement error = driver.get().findElement(Error);
-			if (IsElementPresent(Error)) {
-				String ErrorsMessage = driver.get().findElement(Error).getText();
-				System.out.println(ErrorsMessage);
-				WebElement Ok = driver.get().findElement(ErrorOK_Button);
-				waitforelementtoBecomeclickable(Ok);
-				Ok.click();
+		waitforelementtoBecomePresent(Error);
+		WebElement ele = driver.get().findElement(Error);
 
-			}
+		ele.isDisplayed();
+		System.out.println(ele.getText());
+		return false;
 
-		} catch (Exception e) {
+	}
 
-			System.out.println("Customer Created Successfully");
+	public void enterAOrganization(String NameOfCompany) {
 
-		}
+		String str = TestUtils.uniqueTextGenerator(NameOfCompany);
+		waitforelementtoBecomePresent(EnterOrganizationName);
 
+		SetText(EnterOrganizationName, NameOfCompany + str);
 	}
 }
