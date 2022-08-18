@@ -2,28 +2,28 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-18T09:21:22 IST" name="Default suite" finished-at="2022-08-18T09:23:48 IST" duration-ms="145213">
+  <suite started-at="2022-08-18T09:35:21 IST" name="Default suite" finished-at="2022-08-18T09:35:50 IST" duration-ms="28237">
     <groups>
     </groups>
-    <test started-at="2022-08-18T09:21:22 IST" name="Default test" finished-at="2022-08-18T09:23:48 IST" duration-ms="145213">
+    <test started-at="2022-08-18T09:35:21 IST" name="Default test" finished-at="2022-08-18T09:35:50 IST" duration-ms="28237">
       <class name="com.Zapproved.tests.AddOrganizationTest">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T09:21:22 IST" name="SetUp" finished-at="2022-08-18T09:21:24 IST" duration-ms="1352" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:21 IST" name="SetUp" finished-at="2022-08-18T09:35:23 IST" duration-ms="1428" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T09:21:24 IST" name="initialie" finished-at="2022-08-18T09:21:24 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:23 IST" name="initialie" finished-at="2022-08-18T09:35:23 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialie -->
-        <test-method signature="searchOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T09:21:24 IST" name="searchOrganization" finished-at="2022-08-18T09:23:45 IST" duration-ms="141327" status="PASS">
+        <test-method signature="addAnOrganisation()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:23 IST" name="addAnOrganisation" finished-at="2022-08-18T09:35:47 IST" duration-ms="24279" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchOrganization -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T09:23:45 IST" name="TearDown" finished-at="2022-08-18T09:23:48 IST" duration-ms="2498" status="PASS">
+        </test-method> <!-- addAnOrganisation -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:47 IST" name="TearDown" finished-at="2022-08-18T09:35:50 IST" duration-ms="2485" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=searchOrganization status=SUCCESS method=AddOrganizationTest.searchOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3] output={null}]]]>
+                <![CDATA[[TestResult name=addAnOrganisation status=SUCCESS method=AddOrganizationTest.addAnOrganisation()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749] output={null}]]]>
               </value>
             </param>
           </params>

@@ -11,8 +11,6 @@ public interface PropertiesConfig extends Config {
 
 	String UserName();
 
-	String UserName2();
-
 	String PWD();
 
 	@DefaultValue("Local")
