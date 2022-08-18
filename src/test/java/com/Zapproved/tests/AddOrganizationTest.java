@@ -70,8 +70,8 @@ public class AddOrganizationTest extends BaseTest {
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
 		pages.getSearchCompany().searchedCompany(Company);
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add User ");
-		pages.getAddUser().clickOnAddUser();
+//		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add User ");
+//		pages.getAddUser().clickOnAddUser();
 
 	}
 

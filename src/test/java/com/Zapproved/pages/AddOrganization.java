@@ -22,22 +22,6 @@ public class AddOrganization extends BasePage {
 
 	By ErrorOK_Button = By.xpath("//span[normalize-space()='OK']");
 
-//	By AddCompany = By.xpath("//span[contains(text(),'ADD COMPANY')]");
-//
-//	By CompanyName = By.xpath("//input[@id='mat-input-0']");
-//
-//	By Companylogo = By.xpath("//div[@class='file-select flex-it-to-me ng-star-inserted']");
-//
-//	By CustomLogoutURL = By.xpath("//input[@id='mat-input-1']");
-//
-//	By SSO_Login = By.xpath("//div[@class='mat-slide-toggle-thumb']");
-//
-//	By SSO_EmailDomains = By.xpath("//textarea[@id='mat-input-2']");
-//
-//	By CreateCompanyButton = By.xpath("//span[normalize-space()='CREATE COMPANY']");
-//
-//	By EnableSSO_Button = By.xpath("//span[normalize-space()='Enable SSO'] ");
-
 	By LHP_admin = By.xpath("//span[normalize-space()='LHP Admin']");
 
 	By AddOrganizationButton = By.xpath("//span[contains(text(),'ADD ORGANIZATION')]");
@@ -71,39 +55,6 @@ public class AddOrganization extends BasePage {
 		clickandwait(Settings);
 	}
 
-//	public void clickOnAddCompany() {
-//		clickandwait(AddCompany);
-//	}
-//
-//	public void enterCompanyName(String Company) {
-//		SeTText(CompanyName, Company);
-//	}
-//
-//	public void uploadCompanyLogo(String PathToFolder) {
-//		waitforelementtoBecomePresent(Companylogo);
-//		InputFiles(Companylogo, PathToFolder);
-//	}
-//
-//	public void enterCustomLogoutURL(String LogoutURL) {
-//		SeTText(CustomLogoutURL, LogoutURL);
-//	}
-//
-//	public void switchSSO_LoginToggle() {
-//		clickandwait(SSO_Login);
-//	}
-//
-//	public void enterSSO_EmailDomains(String EmailDomains) {
-//		SeTText(SSO_EmailDomains, EmailDomains);
-//	}
-//
-//	public void clickOnCreateCompanyButton() {
-//		clickandwait(CreateCompanyButton);
-//	}
-//
-//	public void clickOnEnableSSO_Button() {
-//		clickandwait(EnableSSO_Button);
-//	}
-
 	public void clickOnLHP_Admin() {
 		clickandwait(LHP_admin);
 		waitforLoaderToAppear();
@@ -125,7 +76,7 @@ public class AddOrganization extends BasePage {
 
 	}
 
-	public void checkOrganization() {
+	public void checkOrganization() { // Check whether organization is created or not
 
 		try {
 			waitforelementtoBecomeclickable(Error);
