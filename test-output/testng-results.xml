@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-18T09:35:21 IST" name="Default suite" finished-at="2022-08-18T09:35:50 IST" duration-ms="28237">
+  <suite started-at="2022-08-18T13:17:27 IST" name="Default suite" finished-at="2022-08-18T13:18:08 IST" duration-ms="40783">
     <groups>
     </groups>
-    <test started-at="2022-08-18T09:35:21 IST" name="Default test" finished-at="2022-08-18T09:35:50 IST" duration-ms="28237">
+    <test started-at="2022-08-18T13:17:27 IST" name="Default test" finished-at="2022-08-18T13:18:08 IST" duration-ms="40783">
       <class name="com.Zapproved.tests.AddOrganizationTest">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:21 IST" name="SetUp" finished-at="2022-08-18T09:35:23 IST" duration-ms="1428" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T13:17:27 IST" name="SetUp" finished-at="2022-08-18T13:17:28 IST" duration-ms="1547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:23 IST" name="initialie" finished-at="2022-08-18T09:35:23 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T13:17:28 IST" name="initialie" finished-at="2022-08-18T13:17:28 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialie -->
-        <test-method signature="addAnOrganisation()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:23 IST" name="addAnOrganisation" finished-at="2022-08-18T09:35:47 IST" duration-ms="24279" status="PASS">
+        <test-method signature="addUserInOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T13:17:28 IST" name="addUserInOrganization" finished-at="2022-08-18T13:18:07 IST" duration-ms="38925" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addAnOrganisation -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749]" started-at="2022-08-18T09:35:47 IST" name="TearDown" finished-at="2022-08-18T09:35:50 IST" duration-ms="2485" status="PASS">
+        </test-method> <!-- addUserInOrganization -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T13:18:07 IST" name="TearDown" finished-at="2022-08-18T13:18:08 IST" duration-ms="268" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addAnOrganisation status=SUCCESS method=AddOrganizationTest.addAnOrganisation()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@67c33749] output={null}]]]>
+                <![CDATA[[TestResult name=addUserInOrganization status=SUCCESS method=AddOrganizationTest.addUserInOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3] output={null}]]]>
               </value>
             </param>
           </params>
