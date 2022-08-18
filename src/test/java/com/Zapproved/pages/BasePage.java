@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+//Generic Methods to carryout automation activities
+
 public class BasePage {
 
 	protected ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -35,7 +37,7 @@ public class BasePage {
 	}
 
 	public void waitforPresenceOFElementUntilCLickable(By locator) {
-		// System.out.println();
+
 		try {
 			WebElement firstResult = new WebDriverWait(driver.get(), 60)
 					.until(ExpectedConditions.elementToBeClickable(locator));

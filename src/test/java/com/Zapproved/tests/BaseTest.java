@@ -45,6 +45,8 @@ public class BaseTest {
 
 	public ExtentTest test;
 
+	// Launch the Bowser
+
 	@BeforeMethod
 	public void SetUp() throws MalformedURLException {
 		System.out.println("In Base setup, you have choosed to run the system as " + prop.Execution());
@@ -80,6 +82,8 @@ public class BaseTest {
 
 	}
 
+	// Close The Browser
+
 	@AfterMethod
 	public void TearDown(ITestResult res) {
 		System.out.println("inside teardown");
@@ -91,6 +95,8 @@ public class BaseTest {
 		}
 
 	}
+
+	// ScreenShot
 
 	public static String TakeScreenshot(String TestName, WebDriver driver) throws IOException {
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);

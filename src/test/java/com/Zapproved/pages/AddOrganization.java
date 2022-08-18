@@ -2,7 +2,6 @@ package com.Zapproved.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import utils.TestUtils;
 
@@ -74,18 +73,14 @@ public class AddOrganization extends BasePage {
 	}
 
 	public void clickOnAddButton() {
+		Sleep(4);
 		clickandwait(AddButton);
 
 	}
 
 	public boolean checkOrganization() { // Check whether organization is created or not
 
-		waitforelementtoBecomePresent(Error);
-		WebElement ele = driver.get().findElement(Error);
-
-		ele.isDisplayed();
-		System.out.println(ele.getText());
-		return false;
+		return IsElementPresent(Error);
 
 	}
 

@@ -13,6 +13,7 @@ public class PageCollection {
 	private SearchCompany searchCompany;
 	private AddUser addUser;
 	private AddOrganization addOrganization;
+	private UserSearch userSearch;
 
 	public SearchCompany getSearchCompany() {
 
@@ -28,4 +29,8 @@ public class PageCollection {
 		return (addOrganization == null) ? addOrganization = new AddOrganization(driver) : addOrganization;
 	}
 
+	public UserSearch getUserSearch() {
+		return (userSearch == null) ? userSearch = new UserSearch(driver) : userSearch;
+
+	}
 }

@@ -2,25 +2,25 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-18T21:19:15 IST" name="Default suite" finished-at="2022-08-18T21:30:51 IST" duration-ms="696145">
+  <suite started-at="2022-08-18T23:51:23 IST" name="Default suite" finished-at="2022-08-18T23:51:58 IST" duration-ms="35801">
     <groups>
     </groups>
-    <test started-at="2022-08-18T21:19:15 IST" name="Default test" finished-at="2022-08-18T21:30:51 IST" duration-ms="696145">
+    <test started-at="2022-08-18T23:51:23 IST" name="Default test" finished-at="2022-08-18T23:51:58 IST" duration-ms="35801">
       <class name="com.Zapproved.tests.AddOrganizationTest">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T21:19:15 IST" name="SetUp" finished-at="2022-08-18T21:19:16 IST" duration-ms="1372" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T23:51:23 IST" name="SetUp" finished-at="2022-08-18T23:51:24 IST" duration-ms="1491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T21:19:16 IST" name="initialie" finished-at="2022-08-18T21:19:16 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T23:51:24 IST" name="initialie" finished-at="2022-08-18T23:51:24 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialie -->
-        <test-method signature="addAnOrganisation()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T21:19:16 IST" name="addAnOrganisation" finished-at="2022-08-18T21:30:48 IST" duration-ms="691791" status="FAIL">
+        <test-method signature="addAnOrganisation()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T23:51:24 IST" name="addAnOrganisation" finished-at="2022-08-18T23:51:58 IST" duration-ms="33862" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException
 at Extras.RetryUtil.retry(RetryUtil.java:24)
-at com.Zapproved.tests.AddOrganizationTest.addAnOrganisation(AddOrganizationTest.java:45)
+at com.Zapproved.tests.AddOrganizationTest.addAnOrganisation(AddOrganizationTest.java:48)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -53,7 +53,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAnOrganisation -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T21:30:48 IST" name="TearDown" finished-at="2022-08-18T21:30:51 IST" duration-ms="2751" status="PASS">
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-18T23:51:58 IST" name="TearDown" finished-at="2022-08-18T23:51:58 IST" duration-ms="301" status="PASS">
           <params>
             <param index="0">
               <value>

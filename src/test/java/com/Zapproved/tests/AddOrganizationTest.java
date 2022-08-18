@@ -8,11 +8,12 @@ import com.aventstack.extentreports.Status;
 
 import Extras.ReportGenerator;
 import Extras.RetryUtil;
+import utils.TestUtils;
 
 @Listeners(Extras.Listeneres.class)
 public class AddOrganizationTest extends BaseTest {
 
-	String Company = "xyzzz Organization";
+	String Company = "#AutomationDemo";
 
 	@Test
 	public void addAnOrganisation() throws Exception {
@@ -35,8 +36,10 @@ public class AddOrganizationTest extends BaseTest {
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add Organization. ");
 		pages.getAddOrganization().clickOnAddOrganization();
 
+		String RandomOrg = TestUtils.uniqueTextGenerator("AutomationDemo");
+
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name ");
-		pages.getAddOrganization().enterOrganizationName(Company);
+		pages.getAddOrganization().enterOrganizationName(RandomOrg);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add button ");
 		pages.getAddOrganization().clickOnAddButton();
@@ -48,7 +51,7 @@ public class AddOrganizationTest extends BaseTest {
 			;
 			return null;
 		}, 10);
-
+		Company = RandomOrg;
 	}
 
 	@Test
