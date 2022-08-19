@@ -5,8 +5,8 @@
     <classes>
       <class name="com.Zapproved.tests.AddOrganizationTest">
         <methods>
-          <include name="addAnOrganisation"/>
           <include name="TearDown"/>
+          <include name="addUserInOrganization"/>
           <include name="initialie"/>
           <include name="SetUp"/>
         </methods>

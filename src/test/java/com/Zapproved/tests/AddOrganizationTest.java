@@ -31,25 +31,29 @@ public class AddOrganizationTest extends BaseTest {
 		pages.getAddOrganization().clickOnSettings();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On LHP Admin. ");
-		pages.getAddOrganization().clickOnLHP_Admin();
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddOrganization().clickOnLHP_Admin(), "LHP Admin Is Not Clicked");
+			;
+			return null;
+		}, 20);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add Organization. ");
 		pages.getAddOrganization().clickOnAddOrganization();
 
 		RetryUtil.retry(() -> {
 			Assert.assertTrue(pages.getAddOrganization().isOrganizationFieldVisible(),
-					"Organization Not Created Or Organization Already Created");
+					"Organization Field Is Not Visible");
 			;
 			return null;
 		}, 20);
+
 		String RandomOrg = TestUtils.uniqueTextGenerator("AutomationDemo");
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name ");
 		pages.getAddOrganization().enterOrganizationName(RandomOrg);
 
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getAddOrganization().isAddButtonVisible(),
-					"Organization Not Created Or Organization Already Created");
+			Assert.assertTrue(pages.getAddOrganization().isAddButtonVisible(), "Add Button Is Not Visible");
 			;
 			return null;
 		}, 20);
@@ -83,16 +87,27 @@ public class AddOrganizationTest extends BaseTest {
 		pages.getAddOrganization().clickOnSettings();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On LHP Admin. ");
-		pages.getAddOrganization().clickOnLHP_Admin();
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddOrganization().clickOnLHP_Admin(), "LHP Admin Is Not Clicked");
+			;
+			return null;
+		}, 20);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name Which you Want To search");
-		pages.getSearchCompany().enterOrganizationNameToSearch(Company);
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getSearchCompany().enterOrganizationNameToSearch(Company));
+			;
+			return null;
+		}, 10);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
 		pages.getSearchCompany().clickOnGoButton();
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
-		pages.getSearchCompany().searchedCompany(Company);
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getSearchCompany().searchOrganization(Company));
+			;
+			return null;
+		}, 10);
 
 	}
 
@@ -112,31 +127,63 @@ public class AddOrganizationTest extends BaseTest {
 		pages.getAddOrganization().clickOnSettings();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On LHP Admin. ");
-		pages.getAddOrganization().clickOnLHP_Admin();
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddOrganization().clickOnLHP_Admin(), "LHP Admin Is Not Clicked");
+			;
+			return null;
+		}, 20);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name Which you Want To search");
-		pages.getSearchCompany().enterOrganizationNameToSearch(Company);
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getSearchCompany().enterOrganizationNameToSearch(Company));
+			;
+			return null;
+		}, 10);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Go Button. ");
 		pages.getSearchCompany().clickOnGoButton();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Searched Organization. ");
-		pages.getAddUser().clickOnSearchedOrganization(Company);
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddUser().clickOnSearchedOrganization(Company));
+			;
+			return null;
+		}, 10);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add User. ");
 		pages.getAddUser().clickOnAddUser();
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Enter User Email. ");
-		pages.getAddUser().addUser("WWW1@Zapproved.com");
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddUser().addUser("www1@zapproved.com"));
+			;
+			return null;
+		}, 10);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add Button. ");
-		pages.getAddUser().clickOnAdd();
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddUser().clickOnAdd());
+			;
+			return null;
+		}, 10);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Dots. ");
-		pages.getAddUser().clickOnDots();
+		pages.getAddUser().clickOnDots("www1@Zapproved.com");
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddUser().clickOnDots("www1@zapproved.com"));
+			;
+			return null;
+		}, 10);
 
-		ReportGenerator.getExtentReport().log(Status.INFO, "Add Admin Access To User. ");
+		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked on Add Admin Access . ");
 		pages.getAddUser().addAdminAccess();
+
+		ReportGenerator.getExtentReport().log(Status.INFO, "Verify Popup Admin Access Added. ");
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddUser().clickOnAddButtonOfAddAdminAccess());
+			;
+			return null;
+		}, 10);
 	}
 
 }

@@ -13,31 +13,20 @@ public class SearchCompany extends BasePage {
 
 	By SearchOrganization = By.xpath("//input[@placeholder='Search Organizations']");
 
-	public void enterOrganizationNameToSearch(String CompanyName) {
-		waitforelementtoBecomePresent(SearchOrganization);
+	public boolean enterOrganizationNameToSearch(String CompanyName) {
 		SetText(SearchOrganization, CompanyName);
+		return isElementPresent(SearchOrganization);
 	}
 
 	public void clickOnGoButton() {
-		waitforelementtoBecomeclickable(GoButton);
+
 		clickandwait(GoButton);
-		Sleep(4);
 
 	}
 
-	public void searchedCompany(String CompanyName) {
-
-		By Table = By.xpath("//tbody[@class='ui-table-tbody']//tr//td[1]");
-		waitforelementtoBecomeclickable(Table);
-		int rowCount = driver.get().findElements(Table).size();
-		for (int i = 1; i <= rowCount; i++) {
-			String actvalue = driver.get()
-					.findElement(By.xpath("//tbody[@class='ui-table-tbody']//tr[" + i + "]//td[1]")).getText();
-			if (actvalue.equals(CompanyName)) {
-				System.out.println("Search Organization is :" + actvalue);
-				break;
-			}
-		}
+	public boolean searchOrganization(String Organization) {
+		By SearchOrganizations = By.xpath("//span[normalize-space()='" + Organization + "']");
+		return isElementPresent(SearchOrganizations);
 	}
 
 }

@@ -3,8 +3,6 @@ package com.Zapproved.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import utils.TestUtils;
-
 public class AddOrganization extends BasePage {
 
 	public AddOrganization(ThreadLocal<WebDriver> driver) {
@@ -56,10 +54,13 @@ public class AddOrganization extends BasePage {
 		clickandwait(Settings);
 	}
 
-	public void clickOnLHP_Admin() {
+	public boolean clickOnLHP_Admin() {
 		clickandwait(LHP_admin);
-		waitforLoaderToAppear();
-		waitforLoaderToDisAppear();
+		return isElementPresent(AddOrganizationButton);
+	}
+
+	public boolean isAddOrganizationIsDisplayed() {
+		return isElementPresent(AddOrganizationButton);
 	}
 
 	public void clickOnAddOrganization() {
@@ -67,18 +68,16 @@ public class AddOrganization extends BasePage {
 	}
 
 	public void enterOrganizationName(String Organization) {
-		waitforelementtoBecomePresent(EnterOrganizationName);
+		// waitforelementtoBecomePresent(EnterOrganizationName);
 		SeTText(EnterOrganizationName, Organization);
-		waitforelementtoBecomeclickable(AddButton);
+
 	}
 
-	public boolean isOrganizationFieldVisible()
-	{
+	public boolean isOrganizationFieldVisible() {
 		return isElementVisible(EnterOrganizationName);
 	}
 
 	public void clickOnAddButton() {
-		Sleep(4);
 		clickandwait(AddButton);
 
 	}
@@ -87,17 +86,11 @@ public class AddOrganization extends BasePage {
 		return isElementVisible(AddButton);
 
 	}
+
 	public boolean checkOrganization() { // Check whether organization is created or not
 
 		return IsElementPresent(Error);
 
 	}
 
-	public void enterAOrganization(String NameOfCompany) {
-
-		String str = TestUtils.uniqueTextGenerator(NameOfCompany);
-		waitforelementtoBecomePresent(EnterOrganizationName);
-
-		SetText(EnterOrganizationName, NameOfCompany + str);
-	}
 }

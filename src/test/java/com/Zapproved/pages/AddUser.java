@@ -11,50 +11,66 @@ public class AddUser extends BasePage {
 
 	By AddUser = By.xpath("//span[contains(text(),'Add User')]");
 
-	By UserEmai = By.xpath("//input[@id='search']");
+	By UserEmail = By.xpath("//input[@id='search']");
 
 	By Add = By.xpath("//span[normalize-space()='Add']");
+
+	By UserAddedSuccessfully = By.xpath("//span[contains(text(),'User successfully added!')]");
 
 	By ThreeDots = By.xpath("//mat-icon[normalize-space()='more_vert']");
 
 	By AddAdminAccess = By.xpath("//button[normalize-space()='ADD ADMIN ACCESS']");
 
-	public void clickOnSearchedOrganization(String Organization) {
-		// By SearchedOrganization = By.xpath("//span[contains(text(),'Ashraff
-		// Organization')]");
-		By SearchedOrganization2 = By.xpath("//span[contains(text(),'" + Organization + "')]");
-//		clickandwait(SearchedOrganization2);
-		javascriptButtonClick(SearchedOrganization2);
+	By AddButton_AddAdminAccess = By.xpath("//button[normalize-space()='Add']");
+
+	public boolean clickOnSearchedOrganization(String Organization) {
+
+		By SearchedOrganization = By.xpath("//span[normalize-space()='" + Organization + "']");
+		clickandwait(SearchedOrganization);
+		return isElementPresent(AddUser);
+
 	}
 
 	public void clickOnAddUser() {
-		Sleep(4);
 		clickandwait(AddUser);
+
 	}
 
-	public void addUser(String Email) {
-		waitforelementtoBecomeclickable(UserEmai);
-		SetText(UserEmai, Email);
-		By Text = By.xpath("//span[@class='mat-option-text']");
-		waitforelementtoBecomeclickable(Text);
-		pressDownArrowKey(UserEmai);
+	public boolean addUser(String Email) {
+
+		waitforelementtoBecomeclickable(UserEmail);
+		SetText(UserEmail, Email);
+		By ChooseMail = By.xpath("//span[@class='mat-option-text']");
+		waitforelementtoBecomeclickable(ChooseMail);
+		pressDownArrowKey(UserEmail);
 		PressEnter();
+		return isElementPresent(Add);
 
 	}
 
-	public void clickOnAdd() {
-		waitforelementtoBecomeclickable(Add);
+	public boolean clickOnAdd() {
+
 		clickandwait(Add);
+		return isElementPresent(UserAddedSuccessfully);
 	}
 
-	public void clickOnDots() {
-		waitforelementtoBecomeclickable(ThreeDots);
-		javascriptButtonClick(ThreeDots);
+	public boolean clickOnDots(String user) {
+		By DesiredUser = By
+				.xpath("//tbody//tr//td//span[contains(text(),'" + user + "')]//following::td[3]//button//span");
+		clickandwait(DesiredUser);
+		return isElementPresent(AddAdminAccess);
 	}
 
 	public void addAdminAccess() {
 		waitforelementtoBecomeclickable(AddAdminAccess);
 		clickandwait(AddAdminAccess);
+
+	}
+
+	public boolean clickOnAddButtonOfAddAdminAccess() {
+		clickandwait(AddButton_AddAdminAccess);
+		By AdminAccessAdded = By.xpath("//span[contains(text(),'Admin access added.')]");
+		return isElementPresent(AdminAccessAdded);
 
 	}
 }
