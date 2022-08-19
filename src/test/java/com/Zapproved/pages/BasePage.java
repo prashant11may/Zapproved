@@ -283,6 +283,10 @@ public class BasePage {
 		return driver.get().findElement(By.cssSelector(cssLocator)).isDisplayed();
 	}
 
+	public boolean isElementVisible(By xpath) {
+		return driver.get().findElement(xpath).isDisplayed();
+	}
+
 	public List<WebElement> ReturnListOfElements(By locator) {
 		return driver.get().findElements(locator);
 	}

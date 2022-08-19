@@ -31,7 +31,7 @@ public class AddOrganization extends BasePage {
 
 	By AddButton = By.xpath("//*[@id='create-org-button']");
 
-	By Error = By.xpath("//h1[@id='mat-dialog-title-1']//following-sibling::div//p");
+	By Error = By.xpath("//span[text()='Organization successfully added!']");
 
 	By SearchOrganization = By.xpath("//input[@placeholder='Search Organizations']");
 
@@ -72,12 +72,21 @@ public class AddOrganization extends BasePage {
 		waitforelementtoBecomeclickable(AddButton);
 	}
 
+	public boolean isOrganizationFieldVisible()
+	{
+		return isElementVisible(EnterOrganizationName);
+	}
+
 	public void clickOnAddButton() {
 		Sleep(4);
 		clickandwait(AddButton);
 
 	}
 
+	public boolean isAddButtonVisible() {
+		return isElementVisible(AddButton);
+
+	}
 	public boolean checkOrganization() { // Check whether organization is created or not
 
 		return IsElementPresent(Error);

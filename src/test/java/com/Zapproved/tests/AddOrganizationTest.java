@@ -36,10 +36,23 @@ public class AddOrganizationTest extends BaseTest {
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add Organization. ");
 		pages.getAddOrganization().clickOnAddOrganization();
 
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddOrganization().isOrganizationFieldVisible(),
+					"Organization Not Created Or Organization Already Created");
+			;
+			return null;
+		}, 20);
 		String RandomOrg = TestUtils.uniqueTextGenerator("AutomationDemo");
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name ");
 		pages.getAddOrganization().enterOrganizationName(RandomOrg);
+
+		RetryUtil.retry(() -> {
+			Assert.assertTrue(pages.getAddOrganization().isAddButtonVisible(),
+					"Organization Not Created Or Organization Already Created");
+			;
+			return null;
+		}, 20);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Add button ");
 		pages.getAddOrganization().clickOnAddButton();
@@ -51,6 +64,7 @@ public class AddOrganizationTest extends BaseTest {
 			;
 			return null;
 		}, 10);
+
 		Company = RandomOrg;
 	}
 

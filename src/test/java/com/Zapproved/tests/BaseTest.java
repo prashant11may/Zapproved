@@ -84,7 +84,7 @@ public class BaseTest {
 
 	// Close The Browser
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void TearDown(ITestResult res) {
 		System.out.println("inside teardown");
 
