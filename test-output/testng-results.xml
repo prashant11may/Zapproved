@@ -1,29 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-19T14:26:51 IST" name="Default suite" finished-at="2022-08-19T14:28:46 IST" duration-ms="115233">
+  <suite started-at="2022-08-27T20:34:18 IST" name="Default suite" finished-at="2022-08-27T20:35:12 IST" duration-ms="54371">
     <groups>
     </groups>
-    <test started-at="2022-08-19T14:26:51 IST" name="Default test" finished-at="2022-08-19T14:28:46 IST" duration-ms="115233">
+    <test started-at="2022-08-27T20:34:18 IST" name="Default test" finished-at="2022-08-27T20:35:12 IST" duration-ms="54371">
       <class name="com.Zapproved.tests.AddOrganizationTest">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-19T14:26:51 IST" name="SetUp" finished-at="2022-08-19T14:26:52 IST" duration-ms="1330" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@662b4c69]" started-at="2022-08-27T20:34:19 IST" name="SetUp" finished-at="2022-08-27T20:34:20 IST" duration-ms="1402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-19T14:26:52 IST" name="initialie" finished-at="2022-08-19T14:26:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialie -->
-        <test-method signature="addUserInOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-19T14:26:52 IST" name="addUserInOrganization" finished-at="2022-08-19T14:28:43 IST" duration-ms="111350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addUserInOrganization -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3]" started-at="2022-08-19T14:28:43 IST" name="TearDown" finished-at="2022-08-19T14:28:46 IST" duration-ms="2514" status="PASS">
+        <test-method signature="addUserInOrganization(java.util.Map)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@662b4c69]" started-at="2022-08-27T20:34:20 IST" name="addUserInOrganization" data-provider="data" finished-at="2022-08-27T20:35:10 IST" duration-ms="49729" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addUserInOrganization status=SUCCESS method=AddOrganizationTest.addUserInOrganization()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@fba92d3] output={null}]]]>
+                <![CDATA[{UserName=cg-satyam.dave@zapproved.com
+, AddOrganization=#AutomationDemo01, AddUser =www1@zapproved.com, DeleteUser=www1@zapproved.com, Test Fields=Test Data, URL=https://zdiscovery-dev.io/zapproved, Password=Qwerty@12345, AddAdminAccess=www1@zapproved.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException
+at Extras.RetryUtil.retry(RetryUtil.java:24)
+at com.Zapproved.tests.AddOrganizationTest.addUserInOrganization(AddOrganizationTest.java:154)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserInOrganization -->
+        <test-method is-config="true" signature="initialie()[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@662b4c69]" started-at="2022-08-27T20:34:20 IST" name="initialie" finished-at="2022-08-27T20:34:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialie -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@662b4c69]" started-at="2022-08-27T20:35:10 IST" name="TearDown" finished-at="2022-08-27T20:35:12 IST" duration-ms="2503" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addUserInOrganization status=FAILURE method=AddOrganizationTest.addUserInOrganization(java.util.Map)[pri:0, instance:com.Zapproved.tests.AddOrganizationTest@662b4c69] output={null}]]]>
               </value>
             </param>
           </params>

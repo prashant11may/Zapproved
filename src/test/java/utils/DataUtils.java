@@ -20,7 +20,7 @@ import com.codoid.products.fillo.Recordset;
 
 public class DataUtils {
 
-	private static String testdatafilepath = System.getProperty("user.dir") + "\\CreateRFQ.xlsx";
+	private static String testdatafilepath = System.getProperty("user.dir") + "\\Zapproved.xlsx";
 
 	public static Properties loadPropertiesfile() throws IOException {
 

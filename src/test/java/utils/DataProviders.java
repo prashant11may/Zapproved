@@ -12,14 +12,14 @@ import org.testng.annotations.DataProvider;
 
 public class DataProviders {
 
-	private static String path = System.getProperty("user.dir") + "\\CreateRFQ.xlsx";
+	private static String path = System.getProperty("user.dir") + "//Zapproved.xlsx";
 
 	@DataProvider(name = "data")
 	public static Object[] getData2() throws Exception {
 		File excelFile = new File(path);
 		FileInputStream fis = new FileInputStream(excelFile);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheet("LoginData");
+		XSSFSheet sheet = workbook.getSheet("ZapprovedData");
 		int rowNum = sheet.getLastRowNum();
 		int columnNum = sheet.getRow(0).getLastCellNum();
 

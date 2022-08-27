@@ -14,6 +14,7 @@ public class PageCollection {
 	private AddUser addUser;
 	private AddOrganization addOrganization;
 	private UserSearch userSearch;
+	private DeleteUser deleteUser;
 
 	public SearchCompany getSearchCompany() {
 
@@ -31,6 +32,11 @@ public class PageCollection {
 
 	public UserSearch getUserSearch() {
 		return (userSearch == null) ? userSearch = new UserSearch(driver) : userSearch;
+
+	}
+
+	public DeleteUser getDeleteUser() {
+		return (deleteUser == null) ? deleteUser = new DeleteUser(driver) : deleteUser;
 
 	}
 }

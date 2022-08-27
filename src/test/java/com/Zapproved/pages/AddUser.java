@@ -36,7 +36,7 @@ public class AddUser extends BasePage {
 
 	}
 
-	public boolean addUser(String Email) {
+	public boolean addUser_Email(String Email) {
 
 		waitforelementtoBecomeclickable(UserEmail);
 		SetText(UserEmail, Email);
