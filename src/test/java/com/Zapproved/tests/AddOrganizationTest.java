@@ -47,7 +47,7 @@ public class AddOrganizationTest extends BaseTest {
 		}, 20);
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name Which We want to Add ");
-		pages.getAddOrganization().enterOrganizationName(map.get("AddOrganization"));
+		pages.getAddOrganization().enterOrganizationName(map.get("Add Organization"));
 
 		RetryUtil.retry(() -> {
 			Assert.assertTrue(pages.getAddOrganization().isAddButtonVisible(), "Add Button Is Not Visible");
@@ -132,7 +132,7 @@ public class AddOrganizationTest extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Entered Organization Name Which you Want To search");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getSearchCompany().enterOrganizationNameToSearch(map.get("AddOrganization")));
+			Assert.assertTrue(pages.getSearchCompany().enterOrganizationNameToSearch(map.get("Add Organization")));
 			;
 			return null;
 		}, 10);
@@ -142,7 +142,7 @@ public class AddOrganizationTest extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Searched Organization. ");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getAddUser().clickOnSearchedOrganization(map.get("AddOrganization")));
+			Assert.assertTrue(pages.getAddUser().clickOnSearchedOrganization(map.get("Add Organization")));
 			;
 			return null;
 		}, 10);
@@ -152,7 +152,7 @@ public class AddOrganizationTest extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Enter User Email to Add User. ");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getAddUser().addUser_Email(map.get("AddUser_Email")), "User Not Add");
+			Assert.assertTrue(pages.getAddUser().addUser_Email(map.get("Add User")), "User Not Add");
 			;
 			return null;
 		}, 10);
@@ -166,7 +166,7 @@ public class AddOrganizationTest extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Dots. ");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getAddUser().clickOnDots(map.get("AddUser")));
+			Assert.assertTrue(pages.getAddUser().clickOnDots(map.get("Add User")));
 			;
 			return null;
 		}, 10);

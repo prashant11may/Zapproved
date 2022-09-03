@@ -20,7 +20,7 @@ public class DeleteUser extends BasePage {
 
 	public boolean clickOnDots(String user) {
 		By DesiredUser = By
-				.xpath("//tbody//tr//td//span[contains(text(),'" + user + "')]//following::td[3]//button//span");
+				.xpath("//tbody//tr//td//span[contains(text(),'" + user + "')]//following::td[2]//button//span");
 		clickandwait(DesiredUser);
 		return isElementPresent(RemoveAdminAccess);
 	}

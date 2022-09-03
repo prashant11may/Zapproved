@@ -6,7 +6,7 @@
       <class name="com.Zapproved.tests.AddOrganizationTest">
         <methods>
           <include name="TearDown"/>
-          <include name="addUserInOrganization" invocation-numbers="0"/>
+          <include name="deleteUserFromOrganization" invocation-numbers="0"/>
           <include name="initialie"/>
           <include name="SetUp"/>
         </methods>
