@@ -1,6 +1,9 @@
 package com.Zapproved.pages;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 
 public class AddOrganization extends BasePage {
@@ -29,7 +32,7 @@ public class AddOrganization extends BasePage {
 
 	By AddButton = By.xpath("//*[@id='create-org-button']");
 
-	By Error = By.xpath("//span[text()='Organization successfully added!']");
+	By OrganizationSuccessfullyAdded = By.xpath("//span[text()='Organization successfully added!']");
 
 	By SearchOrganization = By.xpath("//input[@placeholder='Search Organizations']");
 
@@ -68,7 +71,6 @@ public class AddOrganization extends BasePage {
 	}
 
 	public void enterOrganizationName(String Organization) {
-		// waitforelementtoBecomePresent(EnterOrganizationName);
 		SeTText(EnterOrganizationName, Organization);
 
 	}
@@ -89,8 +91,17 @@ public class AddOrganization extends BasePage {
 
 	public boolean checkOrganization() { // Check whether organization is created or not
 
-		return IsElementPresent(Error);
+		return IsElementPresent(OrganizationSuccessfullyAdded);
+	}
 
+	public boolean name() {
+		try {
+			return IsElementPresent(OrganizationSuccessfullyAdded);
+		} catch (NoSuchElementException ignored) {
+			return false;
+		} catch (StaleElementReferenceException ignored) {
+			return false;
+		}
 	}
 
 }

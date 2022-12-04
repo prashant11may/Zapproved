@@ -17,7 +17,7 @@ public class PageCollection {
 	private DeleteUser deleteUser;
 
 	public SearchCompany getSearchCompany() {
-
+//variable x=(expression)?value if true:value if false;
 		return (searchCompany == null) ? searchCompany = new SearchCompany(driver) : searchCompany;
 
 	}

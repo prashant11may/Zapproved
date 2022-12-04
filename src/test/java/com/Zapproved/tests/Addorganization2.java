@@ -63,7 +63,7 @@ public class Addorganization2 extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Check Organization is Create or Not ");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getAddOrganization().checkOrganization(),
+			Assert.assertTrue(pages.getAddOrganization().name(),
 					"Organization Not Created Or Organization Already Created");
 			;
 			return null;
@@ -169,7 +169,7 @@ public class Addorganization2 extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Dots. ");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getAddUser().clickOnDots("www1@zapproved.com"));
+			Assert.assertTrue(pages.getAddUser().clickOnUser("www1@zapproved.com"));
 			;
 			return null;
 		}, 10);
@@ -226,7 +226,7 @@ public class Addorganization2 extends BaseTest {
 
 		ReportGenerator.getExtentReport().log(Status.INFO, "Clicked On Dots. ");
 		RetryUtil.retry(() -> {
-			Assert.assertTrue(pages.getDeleteUser().clickOnDots("www1@zapproved.com"));
+			Assert.assertTrue(pages.getDeleteUser().clickOnUsers("www1@zapproved.com"));
 			;
 			return null;
 		}, 10);

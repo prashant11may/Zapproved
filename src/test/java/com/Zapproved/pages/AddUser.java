@@ -23,6 +23,8 @@ public class AddUser extends BasePage {
 
 	By AddButton_AddAdminAccess = By.xpath("//button[normalize-space()='Add']");
 
+	By AdminAccessAdded = By.xpath("//span[normalize-space()='Admin access added.']");
+
 	public boolean clickOnSearchedOrganization(String Organization) {
 
 		By SearchedOrganization = By.xpath("//span[normalize-space()='" + Organization + "']");
@@ -48,20 +50,49 @@ public class AddUser extends BasePage {
 
 	}
 
+	public boolean addUsers_Email(String... Email) {// For add multiple users Email
+
+		for (String email : Email) {
+			waitforelementtoBecomeclickable(UserEmail);
+			SetText(UserEmail, email);
+			By ChooseMail = By.xpath("//span[@class='mat-option-text']");
+			waitforelementtoBecomeclickable(ChooseMail);
+			pressDownArrowKey(UserEmail);
+			PressEnter();
+			clickandwait(Add);
+			waitforelementtoBecomePresent(UserAddedSuccessfully);
+			clickOnAddUser();
+		}
+
+		return isElementPresent(AddUser);
+
+	}
+
 	public boolean clickOnAdd() {
 
 		clickandwait(Add);
 		return isElementPresent(UserAddedSuccessfully);
 	}
 
-	public boolean clickOnDots(String user) {
-		By DesiredUser = By
-				.xpath("//tbody//tr//td//span[contains(text(),'" + user + "')]//following::td[3]//button//span");
+	public boolean clickOnUser(String user) { // Click On Dots
+		By DesiredUser = By.xpath("//tbody//tr//td//span[contains(text(),'" + user + "')]//following::td[2]//button");
 		clickandwait(DesiredUser);
 		return isElementPresent(AddAdminAccess);
 	}
 
-	public void addAdminAccess() {
+	public boolean addAdminAccess(String... user) { // For add admin access to Multiple
+
+		for (String email : user) {
+			By DesiredUser = By
+					.xpath("//tbody//tr//td//span[contains(text(),'" + email + "')]//following::td[2]//button");
+			clickandwait(DesiredUser); // click on dots
+			addAdminAccess(); // click on add admin access after click on dots
+			clickOnAddButtonOfAddAdminAccess(); // Pop-Up
+		}
+		return isElementPresent(AddUser);
+	}
+
+	public void addAdminAccess() { // click on add admin access after click on dots
 		waitforelementtoBecomeclickable(AddAdminAccess);
 		clickandwait(AddAdminAccess);
 
